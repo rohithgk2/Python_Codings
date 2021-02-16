@@ -23,6 +23,18 @@ def findPrimeFactors(primeList,num):
     if num>1:
         primeFactors.append(int(num))
     print(primeFactors)
+    
+def findPrimeFactoreTheirWay(num):
+    factors = []
+    divisor = 2
+    
+    while divisor<= num:
+        if num%divisor==0:
+            factors.append(divisor)
+            num = num/divisor
+        else:
+            divisor +=1
+    print(factors)
 
 def main():
     index = int(input("Enter the number upto which prime numbers are to be found"))
@@ -30,6 +42,6 @@ def main():
     primeList = findPrimeList(index)
     print(primeList)
     findPrimeFactors(primeList, num)
-
+    findPrimeFactoreTheirWay(num)
 if __name__ == '__main__':
     main()
