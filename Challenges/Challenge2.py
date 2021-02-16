@@ -36,6 +36,19 @@ def findPrimeFactoreTheirWay(num):
             divisor +=1
     print(factors)
 
+def findFibinocci(entry):
+
+    num1 = 0
+    num2 = 1
+    sum = 0
+    count = 0
+    while count < entry:
+        sum = num1 + num2
+        num2 = num1
+        print(num2)
+        num1 = sum
+        count = count+1
+
 def main():
     index = int(input("Enter the number upto which prime numbers are to be found"))
     num = int(input("Enter the number to find its prime factors"))
@@ -43,5 +56,6 @@ def main():
     print(primeList)
     findPrimeFactors(primeList, num)
     findPrimeFactoreTheirWay(num)
+    findFibinocci(10)
 if __name__ == '__main__':
     main()
