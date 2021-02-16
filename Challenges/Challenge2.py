@@ -23,20 +23,18 @@ def findPrimeFactors(primeList,num):
     if num>1:
         primeFactors.append(int(num))
     print(primeFactors)
-
-def findFibinocci(entry):
-
-    num1 = 0
-    num2 = 1
-    sum = 0
-    count = 0
-    while count < entry:
-        sum = num1 + num2
-        num2 = num1
-        print(num2)
-        num1 = sum
-        count = count+1
-
+    
+def findPrimeFactoreTheirWay(num):
+    factors = []
+    divisor = 2
+    
+    while divisor<= num:
+        if num%divisor==0:
+            factors.append(divisor)
+            num = num/divisor
+        else:
+            divisor +=1
+    print(factors)
 
 def main():
     index = int(input("Enter the number upto which prime numbers are to be found"))
@@ -44,8 +42,6 @@ def main():
     primeList = findPrimeList(index)
     print(primeList)
     findPrimeFactors(primeList, num)
-    entry = int(input("Find fibinocci numbers upto ??????"))
-    findFibinocci(entry)
-
+    findPrimeFactoreTheirWay(num)
 if __name__ == '__main__':
     main()
