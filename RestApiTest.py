@@ -1,20 +1,16 @@
 import requests
 
-def getAPI():
+def getAPI(url,resultFile):
 
-    resultFile = open("results.txt", "w")
-    url = 'https://jsonplaceholder.typicode.com/albums'
     response = requests.request("GET",url)
     resultFile.write(response.text)
     return response.json()
 
-
 def main():
 
-    print(getAPI())
-
-
-
+    url = url = 'https://jsonplaceholder.typicode.com/albums'
+    resultFile = open("results.txt", "w")
+    print(getAPI(url,resultFile))
 
 if __name__ == '__main__':
     main()
