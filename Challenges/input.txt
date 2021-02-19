@@ -1,0 +1,3 @@
+This code first makes five floating-point variables. Each has several numbers after the decimal point (.). We store their values in variables valueA through valueE.
+Then we round each to a number of decimal places. We call the round() function with two arguments. The first is the variable we just made. The second the number of decimals to round to. Here we use values 5 through 1 for that. We store the rounded values in new variables (roundA through roundE).
+Then Python's print() function displays both the original and rounded value. With the ljust() string method we align the original value to the left. That makes for a nice table-like output. As we can see from the output, each value is rounded correctly:
